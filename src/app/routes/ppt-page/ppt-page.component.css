@@ -1,0 +1,23 @@
+.ppt {
+    position: relative;
+    transition: 0.5s ease 0s;
+    top: 0;
+}
+
+.ppt>* {
+    display: block;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.ppt>*:nth-child(n) {
+    background: wheat;
+}
+
+.ppt>*:nth-child(2n-1) {
+    background: saddlebrown;
+}
+
+.ppt>*:nth-child(3n-1) {
+    background: seagreen;
+}
