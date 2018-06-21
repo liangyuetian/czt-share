@@ -17,7 +17,7 @@ export class PptPageComponent implements OnInit {
     @HostBinding('style.display') display = 'block';
     @HostBinding('style.height') height = '100vh';
     @HostBinding('style.overflow') overflow = 'hidden';
-    constructor() {}
+    constructor() { }
 
     ngOnInit() {
         fromEvent(
@@ -85,4 +85,9 @@ export class PptPageComponent implements OnInit {
     pagaChange(number) {
         console.log(this.jumpNumber);
     }
+
+    setJumpNumber(val) {
+        this.jumpNumber = val;
+    }
+
 }

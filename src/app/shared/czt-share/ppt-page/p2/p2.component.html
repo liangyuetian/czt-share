@@ -2,7 +2,7 @@
     <div class="d-block">
         <div nz-row>
             <ng-container *ngFor="let data of catalog; let i = index">
-                <div nz-col nzSpan="12" class="text-md">
+                <div nz-col nzSpan="12" class="text-md" (click)="jumpPage(i+2)">
                     <span class="text-lg">{{i+1}}.</span>
                     <span>{{ data }}</span>
                 </div>

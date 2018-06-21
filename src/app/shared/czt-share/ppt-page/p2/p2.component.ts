@@ -1,14 +1,15 @@
-import { Component, OnInit } from '@angular/core';
-
+import { P3Component } from './../p3/p3.component';
+import { Component, OnInit, Injector, } from '@angular/core';
+import { PptPageComponent } from "../../../../routes/ppt-page/ppt-page.component";
 @Component({
     selector: 'p2',
     templateUrl: './p2.component.html',
     styleUrls: ['./p2.component.css'],
 })
 export class P2Component implements OnInit {
-    constructor() {}
+    constructor(private injector: Injector, ) { }
 
-    ngOnInit() {}
+    ngOnInit() { }
     catalog = [
         '多样的字体',
         '多重边框',
@@ -28,4 +29,7 @@ export class P2Component implements OnInit {
         '折角效果',
         '折角效果',
     ];
+    jumpPage(val) {
+        this.injector.get(PptPageComponent).jumpNumber = val;
+    }
 }
