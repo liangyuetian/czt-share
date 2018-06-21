@@ -118,6 +118,7 @@
             "git add"
         ],
         "*.ts": [
+            "prettier --write",
             "git add"
         ],
         "src/**/*.less": [

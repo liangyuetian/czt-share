@@ -3,3 +3,15 @@
     right: 10px;
     top: 10px;
 }
+
+.box {
+    margin-top: -5%;
+}
+
+.box h1 {
+    font-size: 56px;
+}
+
+.box h3 {
+    margin-left: 100px;
+}
