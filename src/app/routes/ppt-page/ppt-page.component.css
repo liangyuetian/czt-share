@@ -4,20 +4,14 @@
     top: 0;
 }
 
-.ppt>* {
+.ppt>*>* {
     display: block;
     height: 100vh;
     overflow: hidden;
+    padding: 40px;
 }
 
-.ppt>*:nth-child(n) {
-    background: wheat;
-}
-
-.ppt>*:nth-child(2n-1) {
-    background: saddlebrown;
-}
-
-.ppt>*:nth-child(3n-1) {
-    background: seagreen;
+i.anticon:hover {
+    font-size: 18px;
+    transition: 0.25s ease 0s;
 }

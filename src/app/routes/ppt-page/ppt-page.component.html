@@ -1,7 +1,7 @@
-<div class="ppt">
-  <p1></p1>
-  <p2></p2>
-  <p3></p3>
-  <p4></p4>
-  <p5></p5>
+<div class="ppt" (scroll)="scrollHandle($event)" [style.top]="topValue" #scrollBox>
+    <p1></p1>
+    <p2></p2>
+    <p3></p3>
+    <p4></p4>
+    <p5></p5>
 </div>
