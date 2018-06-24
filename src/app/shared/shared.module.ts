@@ -21,7 +21,7 @@ import { P1Component } from './czt-share/ppt-page/p1/p1.component';
 import { P2Component } from './czt-share/ppt-page/p2/p2.component';
 import { P3Component } from './czt-share/ppt-page/p3/p3.component';
 import { P4Component } from './czt-share/ppt-page/p4/p4.component';
-import { P5Component } from './czt-share/ppt-page/p5/P5.component';
+import { P5Component } from './czt-share/ppt-page/p5/p5.component';
 import { P6Component } from './czt-share/ppt-page/p6/p6.component';
 import { P7Component } from './czt-share/ppt-page/p7/p7.component';
 import { P8Component } from './czt-share/ppt-page/p8/p8.component';
@@ -130,4 +130,4 @@ const THIRDMODULES = [
         ...DIRECTIVES,
     ],
 })
-export class SharedModule {}
+export class SharedModule { }

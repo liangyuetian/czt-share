@@ -31,7 +31,7 @@ export class PptPageComponent implements OnInit {
     top: number = 0;
     pageList = [{}, {}, {}, {}, {}];
 
-    jumpNumber: number = 1;
+    jumpNumber: number = 0;
 
     scrollHandle($event) {
         $event.stopPropagation();

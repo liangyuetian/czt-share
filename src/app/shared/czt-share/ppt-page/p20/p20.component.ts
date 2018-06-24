@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./p20.component.css'],
 })
 export class P20Component implements OnInit {
-    constructor() {}
+    constructor() { }
 
-    ngOnInit() {}
+    ngOnInit() { }
+    text: string = "环形文字，circular reasoning works because"
 }

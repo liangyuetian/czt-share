@@ -1,4 +1,9 @@
-<div>
+<div class="more-text">
     <h1>多样的字体</h1>
+    <span *ngFor="let data of textSet" [class]="data.class" [title]="data.title">{{ data.name }}</span>
 
+    <svg id="hollow-text-svg" overflow="visible" width="7em" height="1.3em">
+        <use xlink:href="#css"></use>
+        <text id="css" y="1em">终极svg方案</text>
+    </svg>
 </div>

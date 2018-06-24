@@ -13,7 +13,66 @@ img {
     width: 100%;
 }
 
+.text-protruding {
+    padding: 0.8em 1em;
+    background: hsl(210, 13%, 60%);
+    color: hsl(210, 13%, 30%);
+    text-shadow: 0 1px 1px hsla(0, 0%, 100%, .8);
+}
+
+.text-protruding2 {
+    background: hsl(210, 13%, 30%);
+    color: hsl(210, 13%, 60%);
+    text-shadow: 0 -1px 1px black;
+}
+
+.hollow-text {
+    background: deeppink;
+    font: bold 200%/1 Rockwell, serif;
+    color: white;
+    text-shadow: 1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black;
+}
+
+#hollow-text-svg {
+    color: white;
+    font-size: 60px;
+    padding-left: 10px;
+}
+
+#hollow-text-svg text {
+    fill: currentColor
+}
+
+#hollow-text-svg use {
+    stroke: black;
+    stroke-width: 6;
+    stroke-linejoin: round;
+}
+
+.glow-text {
+    color: red;
+    text-decoration: none;
+    transition: 1s;
+}
+
+.glow-text:hover {
+    text-shadow: 0 0 .1em, 0 0 .3em;
+}
+
+.extruded-text {
+    font-size: 26px;
+    color: white;
+    text-shadow: 0 1px hsl(0, 0%, 85%), 0 2px hsl(0, 0%, 80%), 0 3px hsl(0, 0%, 75%), 0 4px hsl(0, 0%, 70%), 0 5px hsl(0, 0%, 65%), 0 5px 10px black;
+}
+
+.extruded-text-black {
+    font-size: 26px;
+    color: white;
+    text-shadow: 1px 1px black, 2px 2px black, 3px 3px black, 4px 4px black, 5px 5px black, 6px 6px black, 7px 7px black, 8px 8px black,
+}
+
 .transparent_border {
+    padding: 10px;
     background: yellowgreen;
     box-shadow: 0 0 0 10px #655, 0 0 0 15px deeppink, 0 2px 5px 15px rgba(0, 0, 0, 0.6);
 }
@@ -509,8 +568,7 @@ img {
     border-radius: .5em;
 }
 
-.angle1 {}
-
+// .angle1 {}
 .angle1::before {
     content: '';
     position: absolute;
@@ -571,11 +629,139 @@ img {
 
 .text-stripe {
     width: 100%;
-    padding-top: .5em;
-    ;
+    font-size: 14px;
     line-height: 1.5;
     background: beige;
     background-size: auto 3em;
     background-origin: border-box;
-    background-image: linear-gradient(rgba(0, 0, 0, .2) 50%, transparent 0);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2) 50%, transparent 0);
+}
+
+.underline {
+    background: linear-gradient(gray, gray) no-repeat;
+    background-size: 100% 1px;
+    background-position: 0 1.15em;
+}
+
+.underline2 {
+    background: linear-gradient(gray, gray) no-repeat;
+    background-size: 100% 1px;
+    background-position: 0 1.15em;
+    text-shadow: 0.05em 0 white, -0.05em 0 white;
+}
+
+@font-face {
+    font-family: Arial, Helvetica, sans-serif "SimHei" "Microsoft Yahei" "Microsoft JhengHei" "KaiTi";
+    src: local("Baskerville"), local("Goudy Old Style"), local("Palatino"), local("Book Antiqua");
+    unicode-range: U+26;
+}
+
+.ampersands {
+    font-size: 28px;
+}
+
+.ampersands1 {
+    font-family: Helvetica; // 一种被广泛使用的传奇般的西文字体
+}
+
+.ampersands2 {
+    font-family: "STZhongsong"; // 华文中宋
+}
+
+.ampersands3 {
+    font-family: "SimHei"; // 黑体
+}
+
+.ampersands4 {
+    font-family: "Microsoft Yahei"; // 微软雅黑
+}
+
+.ampersands5 {
+    font-family: "STFangsong"; // 华文仿宋
+}
+
+.ampersands6 {
+    font-family: "KaiTi"; // 楷体
+}
+
+.ampersands7 {
+    font-family: "PingFang SC"; // 苹方
+}
+
+.ampersands8 {
+    font-family: "STKaiti"; // 华文楷体
+}
+
+.ampersands9 {
+    font-family: "STHupo"; // 华文琥珀
+}
+
+.ampersands10 {
+    font-family: "STLiti"; // 华文隶书
+}
+
+.ampersands11 {
+    font-family: "STXingkai"; // 华文行楷
+}
+
+.ampersands12 {
+    font-family: "YouYuan"; // 幼圆
+}
+
+.ampersands13 {
+    font-family: "STCaiyun"; // 华文彩云
+}
+
+.ampersands14 {
+    font-family: "FZYaoti"; // 方正姚体
+}
+
+.ampersands15 {
+    font-family: "FZShuTi"; // 方正舒体
+}
+
+.ampersands16 {
+    font-family: "STXinwei"; // 华文新魏
+}
+
+.ampersands17 {
+    font-family: "SimSun"; // 宋体
+}
+
+.ampersands18 {
+    font-family: "Arial"; // Win平台上默认的无衬线西文字体
+}
+
+.ampersands18 {
+    font-family: "Tahoma"; // 十分常见的无衬线字体
+}
+
+.ampersands19 {
+    font-family: "Verdana"; // 无衬线字体，优点在于它在小字上仍结构清晰端整、阅读辨识容易。
+}
+
+.ampersands20 {
+    font-family: "STHeiti"; // 无衬线字体，优点在于它在小字上仍结构清晰端整、阅读辨识容易。
+}
+
+.ampersands21 {
+    font-family: "STXihei"; // 无衬线字体，优点在于它在小字上仍结构清晰端整、阅读辨识容易。
+}
+
+.circular svg {
+    display: block;
+    overflow: visible;
+    transition: 10s linear transform;
+}
+
+.circular svg:hover {
+    transform: rotate(-2turn);
+}
+
+.circular text {
+    fill: currentColor
+}
+
+.circular path {
+    fill: none;
 }

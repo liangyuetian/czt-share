@@ -1,3 +1,15 @@
-<p>
-  p20 works!
-</p>
+<div>
+  <h1>环形文字</h1>
+  <div class="new-css d-flex align-content-center justify-content-center" [ngStyle]="{ width: '100%' , height: '300px'}">
+    <div class="circular" [ngStyle]="{ width: '300px' }">
+      <svg viewBox="0 0 100 100">
+        <path d="M0,50 a50,50 0 1,1 0,1z" id="circle"></path>
+        <text>
+          <textPath xlink:href="#circle">
+            {{ text }}
+          </textPath>
+        </text>
+      </svg>
+    </div>
+  </div>
+</div>

@@ -26,8 +26,9 @@ export class P2Component implements OnInit {
         '毛玻璃效果',
         '折角效果',
         '文本行的斑马条纹',
-        '折角效果',
-        '折角效果',
+        '自定义下划线',
+        '华丽的&符号',
+        '环形文字',
     ];
     jumpPage(val) {
         this.injector.get(PptPageComponent).jumpNumber = val;
