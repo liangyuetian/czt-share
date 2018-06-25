@@ -98,6 +98,7 @@ const THIRDMODULES = [
     imports: [
         CommonModule,
         FormsModule,
+        FormsModule,
         RouterModule,
         ReactiveFormsModule,
         AlainThemeModule.forChild(),

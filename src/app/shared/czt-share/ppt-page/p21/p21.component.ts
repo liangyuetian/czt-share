@@ -14,7 +14,7 @@ export class P21Component implements OnInit {
         'count-down 倒计时',
         'ellipsis 文本自动省略号',
         'full-content 全屏工作区',
-        'lodop Lodop打印',
+        // 'lodop Lodop打印',
         'number-to-chinese 人民币大写',
         'qr 二维码',
         'xlsx Excel 操作',

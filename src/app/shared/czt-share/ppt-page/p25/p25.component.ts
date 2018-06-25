@@ -12,10 +12,10 @@ export class P25Component implements OnInit {
     ngOnInit() { }
     config: any = {
         template: `$!s-ext!秒`,
-        leftTime: 30
+        leftTime: 30000
     };
     target = addMinutes(new Date, 10);
     onEnd() {
-        this.msg.success('finised');
+        this.msg.success('计时结束');
     }
 }

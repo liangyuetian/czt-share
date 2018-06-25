@@ -7,10 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class P24Component implements OnInit {
     constructor() { }
-    percent = 87;
     tags: any[] = [];
+    salesData: any[] = [];
     ngOnInit(): void {
-        setInterval(() => this.percent = parseInt((Math.random() * 100).toString(), 10), 1000);
         for (let i = 0; i < 500; i += 1) {
             this.tags.push({
                 name: `TagClout-Title-${i}`,
@@ -18,5 +17,11 @@ export class P24Component implements OnInit {
             });
         }
         this.tags.push({ name: `我最大`, value: 1500 });
+        for (let i = 0; i < 12; i += 1) {
+            this.salesData.push({
+                x: `${i + 1}月`,
+                y: Math.floor(Math.random() * 1000) + 200
+            });
+        }
     }
 }
