@@ -1,3 +1,14 @@
-<p>
-  p25 works!
-</p>
+<div class="">
+    <h1>count-down 倒计时</h1>
+    <div>
+        <count-down [config]="config"></count-down>
+        <p class="mb-sm">
+            <span>10s:</span>
+            <count-down [target]="10" (end)="onEnd()" style="font-size: 20px;"></count-down>
+        </p>
+        <p>
+            <span>10m:</span>
+            <count-down [target]="target"></count-down>
+        </p>
+    </div>
+</div>
