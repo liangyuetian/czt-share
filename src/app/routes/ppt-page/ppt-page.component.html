@@ -1,6 +1,11 @@
 <div class="ppt" (scroll)="scrollHandle($event)" [style.top]="'-' + jumpNumber * 100+ 'vh'" #scrollBox>
+    <div class="top-right-box bottom-right-box">
+        <span class="full-screen top-right-box bottom-right-box" [title]="screenfull.isFullscreen ? '退出全屏' : '全屏'" (click)="screen()">
+            <i class="anticon anticon-arrows-alt"></i>
+        </span>
+    </div>
     <div class="bottom-right-box">
-        <nz-input-number class="bottom-right-box" [(ngModel)]="jumpNumber" [nzMin]="0" [nzMax]="100" [nzStep]="1" (ngModelChange)="pagaChange($event)"></nz-input-number>
+        <nz-input-number class="bottom-right-box" #inputNumber [(ngModel)]="jumpNumber" [nzMin]="0" [nzMax]="100" [nzStep]="1" (ngModelChange)="pagaChange($event)"></nz-input-number>
     </div>
     <p1></p1>
     <p2></p2>

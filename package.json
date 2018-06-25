@@ -21,7 +21,6 @@
         "scaffold"
     ],
     "scripts": {
-        "precommit": "npm run lint-staged",
         "ng": "ng",
         "start": "ng serve -o --port 6500 -c=hmr --host 0.0.0.0",
         "hmr": "ng serve -c=hmr",

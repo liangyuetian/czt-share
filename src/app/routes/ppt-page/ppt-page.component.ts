@@ -5,7 +5,9 @@ import {
     ElementRef,
     HostBinding,
 } from '@angular/core';
-import { fromEvent, timer } from 'rxjs';
+import { fromEvent, timer, Observable, interval } from 'rxjs';
+import * as screenfull from "screenfull";
+import { debounceTime } from 'rxjs/operators';
 @Component({
     selector: 'ppt-page',
     templateUrl: './ppt-page.component.html',
@@ -24,15 +26,26 @@ export class PptPageComponent implements OnInit {
             document.getElementsByClassName('wrapper')[0],
             'wheel',
         ).subscribe(this.scrollHandle.bind(this));
+
+        let inputEvents = fromEvent(this.inputNumber.el as any, "input");
+        let result = inputEvents.pipe(debounceTime(1000));
+        result.subscribe((e: any) => {
+            this.jumpNumber = e.target.value - 0;
+        });
     }
     @ViewChild('scrollBox') scrollBox: ElementRef;
+    @ViewChild("inputNumber") inputNumber: any;
     isScroll: boolean = true;
     topValue: string = '0';
     top: number = 0;
     pageList = [{}, {}, {}, {}, {}];
 
     jumpNumber: number = 0;
-
+    screenfull = screenfull;
+    screen() {
+        console.log(screenfull);
+        screenfull.toggle();
+    }
     scrollHandle($event) {
         $event.stopPropagation();
         $event.preventDefault();
@@ -83,7 +96,8 @@ export class PptPageComponent implements OnInit {
     }
 
     pagaChange(number) {
-        console.log(this.jumpNumber);
+        console.log(number);
+        console.log(this.inputNumber);
     }
 
     setJumpNumber(val) {
