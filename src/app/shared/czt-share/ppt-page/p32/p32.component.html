@@ -1,0 +1,11 @@
+<div>
+  <h1>zip Zip 操作</h1>
+  <div>
+    <h2>读取zip文件</h2>
+    <button nz-button (click)="url()">Via Url</button>
+    <input type="file" (change)="change($event)" multiple="false" class="ml-sm" />
+    <ol>
+      <li *ngFor="let i of data">{{i | json}}</li>
+    </ol>
+  </div>
+</div>

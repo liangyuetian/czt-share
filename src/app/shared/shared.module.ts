@@ -48,6 +48,15 @@ import { P28Component } from './czt-share/ppt-page/p28/p28.component';
 import { P29Component } from './czt-share/ppt-page/p29/p29.component';
 import { P30Component } from './czt-share/ppt-page/p30/p30.component';
 import { P31Component } from './czt-share/ppt-page/p31/p31.component';
+import { P32Component } from './czt-share/ppt-page/p32/p32.component';
+import { P33Component } from './czt-share/ppt-page/p33/p33.component';
+import { P34Component } from './czt-share/ppt-page/p34/p34.component';
+import { P35Component } from './czt-share/ppt-page/p35/p35.component';
+import { P36Component } from './czt-share/ppt-page/p36/p36.component';
+import { P37Component } from './czt-share/ppt-page/p37/p37.component';
+import { P38Component } from './czt-share/ppt-page/p38/p38.component';
+import { P39Component } from './czt-share/ppt-page/p39/p39.component';
+import { P40Component } from './czt-share/ppt-page/p40/p40.component';
 // region: your componets & directives
 const COMPONENTS = [
     P1Component,
@@ -81,6 +90,16 @@ const COMPONENTS = [
     P29Component,
     P30Component,
     P31Component,
+    P32Component,
+    P33Component,
+    P34Component,
+    P35Component,
+    P36Component,
+    P37Component,
+    P38Component,
+    P39Component,
+    P40Component
+
 ];
 const DIRECTIVES = [];
 

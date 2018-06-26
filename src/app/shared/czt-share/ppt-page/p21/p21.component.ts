@@ -18,8 +18,8 @@ export class P21Component implements OnInit {
         'number-to-chinese 人民币大写',
         'qr 二维码',
         'xlsx Excel 操作',
-        'zip Zip 操作',
         'down-file 下载文件',
+        'zip Zip 操作',
     ];
     jumpPage(val) {
         this.injector.get(PptPageComponent).jumpNumber = val;

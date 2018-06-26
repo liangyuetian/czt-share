@@ -6,7 +6,13 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./p31.component.css'],
 })
 export class P31Component implements OnInit {
-    constructor() {}
+    constructor() { }
 
-    ngOnInit() {}
+    ngOnInit() { }
+    fileTypes = ['.xlsx', '.docx', '.pptx', '.pdf'];
+
+    data = {
+        otherdata: 1,
+        time: new Date()
+    };
 }

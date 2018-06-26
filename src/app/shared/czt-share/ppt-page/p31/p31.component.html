@@ -1,3 +1,7 @@
-<p>
-  p31 works!
-</p>
+<div>
+  <h1>down-file 下载文件</h1>
+  <div>
+    <button nz-button *ngFor="let i of fileTypes" class="mr-sm" down-file [http-data]="data" http-url="./assets/office/demo{{i}}"
+      file-name="demo中文">{{i}}</button>
+  </div>
+</div>
