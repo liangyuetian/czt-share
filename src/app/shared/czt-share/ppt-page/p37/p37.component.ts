@@ -15,6 +15,6 @@ export class P37Component implements OnInit {
     iframeInit($event) {
         console.log($event);
         let iframe = $event.path[0];
-        iframe.contentWindow.document.getElementTagName("html").style.overflowY = "hidden"
+        // iframe.contentWindow.document.getElementTagName("html").style.overflowY = "hidden"
     }
 }
