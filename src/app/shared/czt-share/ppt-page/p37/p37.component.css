@@ -1,0 +1,8 @@
+iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.d-flex iframe html {
+    overflow-y: hidden;
+}

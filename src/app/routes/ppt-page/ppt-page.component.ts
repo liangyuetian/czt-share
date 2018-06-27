@@ -40,7 +40,7 @@ export class PptPageComponent implements OnInit {
     top: number = 0;
     pageList = [{}, {}, {}, {}, {}];
 
-    jumpNumber: number = 0;
+    jumpNumber: number = 35;
     screenfull = screenfull;
     screen() {
         console.log(screenfull);

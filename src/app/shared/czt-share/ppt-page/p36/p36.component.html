@@ -1,3 +1,14 @@
-<p>
-  p36 works!
-</p>
+<div class="d-flex align-items-center justify-content-center">
+    <div class="d-block">
+        <h1>第三部分：javaScript想都不敢想的事儿</h1>
+        <div nz-row>
+            <ng-container *ngFor="let data of catalog; let i = index">
+                <div nz-col nzSpan="12" class="text-md" (click)="jumpPage(i+21)">
+                    <span class="text-lg">{{i+1}}.</span>
+                    <span>{{ data }}</span>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+
+</div>

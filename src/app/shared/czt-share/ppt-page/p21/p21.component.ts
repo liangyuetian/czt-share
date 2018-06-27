@@ -20,6 +20,8 @@ export class P21Component implements OnInit {
         'xlsx Excel 操作',
         'down-file 下载文件',
         'zip Zip 操作',
+        '桌面通知',
+        '警告提示',
     ];
     jumpPage(val) {
         this.injector.get(PptPageComponent).jumpNumber = val;
