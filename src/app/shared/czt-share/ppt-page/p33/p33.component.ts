@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { NzNotificationService } from "ng-zorro-antd";
 @Component({
     selector: 'p33',
     templateUrl: './p33.component.html',
@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class P33Component implements OnInit {
 
-    constructor() { }
+    constructor(private notificationService: NzNotificationService) { }
 
     ngOnInit() {
     }
@@ -32,10 +32,12 @@ export class P33Component implements OnInit {
                 notification.close();
             };
         }
-        else if ((<any>window).Notification.permission != "denied") {
-            Notification.requestPermission((permission) => {
-                _this.popNotice();
-            });
+        else if ((<any>window).Notification.permission === "denied") {
+            // Notification.requestPermission((permission) => {
+            //     _this.popNotice();
+            // });
+            _this.notificationService.create("error", "桌面通知权限被拒绝", "可能原因有：1.您的网页协议为非https,2.您禁止了通知权限")
+
         }
     };
 }

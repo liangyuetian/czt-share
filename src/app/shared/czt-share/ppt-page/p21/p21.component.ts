@@ -10,7 +10,9 @@ export class P21Component implements OnInit {
     constructor(private injector: Injector) { }
     ngOnInit() { }
     catalog = [
-        'Charts 图表',
+        '图表套件组合展示',
+        '雷达图、带有时间轴的图表',
+        '标签云、柱状图、水波图',
         'count-down 倒计时',
         'ellipsis 文本自动省略号',
         'full-content 全屏工作区',

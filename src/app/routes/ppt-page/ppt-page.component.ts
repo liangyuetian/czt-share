@@ -27,20 +27,20 @@ export class PptPageComponent implements OnInit {
             'wheel',
         ).subscribe(this.scrollHandle.bind(this));
 
-        let inputEvents = fromEvent(this.inputNumber.el as any, "input");
+        let inputEvents = fromEvent(this.inputNumberRef.el as any, "input");
         let result = inputEvents.pipe(debounceTime(1000));
         result.subscribe((e: any) => {
             this.jumpNumber = e.target.value - 0;
         });
     }
     @ViewChild('scrollBox') scrollBox: ElementRef;
-    @ViewChild("inputNumber") inputNumber: any;
+    @ViewChild("inputNumberRef") inputNumberRef: any;
     isScroll: boolean = true;
     topValue: string = '0';
     top: number = 0;
     pageList = [{}, {}, {}, {}, {}];
 
-    jumpNumber: number = 35;
+    jumpNumber: number = 0;
     screenfull = screenfull;
     screen() {
         console.log(screenfull);
@@ -97,11 +97,31 @@ export class PptPageComponent implements OnInit {
 
     pagaChange(number) {
         console.log(number);
-        console.log(this.inputNumber);
+        console.log(this.inputNumberRef);
     }
 
     setJumpNumber(val) {
         this.jumpNumber = val;
     }
 
+    goBack() {
+        if (this.jumpNumber > 1 && this.jumpNumber <= 19) {
+            this.jumpNumber = 1;
+        }
+        else if (this.jumpNumber > 21 && this.jumpNumber <= 34) {
+            this.jumpNumber = 20;
+        }
+        else if (this.jumpNumber > 35) {
+            this.jumpNumber = 35;
+        }
+    }
+    sectionNode = [1, 20, 35]; // 章节节点
+    // jumpSection(val) {
+    //     if() {
+
+    //     }
+    // }
+    // getBoundaryIndex() {
+
+    // }
 }
