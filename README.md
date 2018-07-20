@@ -1,3 +1,14 @@
+前端新技术分享，主要为css
+整个项目套用 ng-alain 
+只加入了PptPageComponent，搜索PptPageComponent，放开对应注释即可
+
+
+
+
+
+
+
+
 [![Build Status](https://travis-ci.org/cipchk/ng-alain.svg?branch=master)](https://travis-ci.org/cipchk/ng-alain)
 [![Dependency Status](https://david-dm.org/cipchk/ng-alain/status.svg)](https://david-dm.org/cipchk/ng-alain)
 [![NPM version](https://img.shields.io/npm/v/ng-alain.svg)](https://www.npmjs.com/package/ng-alain)
